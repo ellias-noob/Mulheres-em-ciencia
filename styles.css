@@ -1,0 +1,25 @@
+    :root { color-scheme: light; }
+    html { scroll-behavior: smooth; }
+    body { background: #faf8fc; color: #211c31; }
+    .glass { background: rgba(255,255,255,.82); backdrop-filter: blur(16px); }
+    .mesh-bg { background-image: radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px); background-size: 21px 21px; }
+    .portrait-fallback { display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#e9dff7,#f5dae2); color:#4a315e; font-weight:800; letter-spacing:-.05em; }
+    .profile-card { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .profile-card:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(33,23,55,.12); }
+    .profile-card[aria-pressed="true"] { border-color:#9866bc; box-shadow:0 0 0 2px rgba(152,102,188,.15); }
+    .filter-chip[aria-pressed="true"] { background:#5a3d7a; color:white; border-color:#5a3d7a; }
+    .tab-btn[aria-selected="true"] { background:#eee8f7; color:#4b2e69; border-color:#c7b4df; }
+    .mind-node { cursor:pointer; outline:none; }
+    .mind-node .node-card { fill:#fff; stroke:#d9cbe8; stroke-width:2; transition:fill .15s, stroke .15s; }
+    .mind-node:hover .node-card, .mind-node:focus .node-card, .mind-node.selected .node-card { fill:#eee8f7; stroke:#8457a5; stroke-width:3; }
+    .mind-node text { fill:#352345; font-family:Inter,system-ui,sans-serif; font-size:15px; font-weight:700; pointer-events:none; }
+    .mind-edge { stroke:#bca8d0; stroke-width:2.5; }
+    .mind-center { fill:#5a3d7a; stroke:#fff; stroke-width:5; }
+    .mind-center-text { fill:#fff; font-family:Inter,system-ui,sans-serif; font-weight:800; text-anchor:middle; }
+    .details-content p { margin:.55rem 0; }
+    .details-content ul { list-style:disc; padding-left:1.3rem; margin:.65rem 0; }
+    .details-content li { margin:.35rem 0; }
+    .source-link { color:#5a3d7a; text-decoration:underline; text-underline-offset:3px; }
+    .source-link:hover { color:#a34370; }
+    model-viewer { width:100%; height:340px; background:linear-gradient(145deg,#f4eff9,#fff); border-radius:1rem; }
+    @media (max-width:640px) { model-viewer { height:280px; } #mindmap { min-width:630px; } .mindmap-scroll { overflow-x:auto; } }
