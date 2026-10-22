@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17152f">
+  <meta name="description" content="Museu digital interativo sobre mulheres na ciência, com trajetórias, mapas mentais, fontes oficiais e laboratório beta 3D.">
+  <title>Ciência com Nome de Mulher | Museu Digital</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/95 text-white backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#inicio" class="flex min-w-0 items-center gap-3">
+        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-rose text-xl font-black">♀</span>
+        <span class="min-w-0"><span class="block truncate text-sm font-extrabold tracking-wide sm:text-base">CIÊNCIA DELAS</span><span class="block truncate text-xs text-white/65">Museu digital · Mato Grosso</span></span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium md:flex" aria-label="Navegação principal">
+        <a class="text-white/75 hover:text-white" href="#pesquisadoras">Trajetórias</a>
+        <a class="text-white/75 hover:text-white" href="#dados">Dados</a>
+        <a class="text-white/75 hover:text-white" href="#sobre">Sobre o projeto</a>
+      </nav>
+      <button id="open-beta-top" class="shrink-0 rounded-xl border border-white/25 px-3 py-2 text-xs font-bold transition hover:bg-white/10 sm:px-4 sm:text-sm">🔐 Beta 3D</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative overflow-hidden bg-ink text-white">
+      <div class="mesh-bg absolute inset-0 opacity-50"></div>
+      <div class="absolute -right-24 -top-32 h-96 w-96 rounded-full bg-plum/60 blur-3xl"></div>
+      <div class="absolute -bottom-40 left-1/4 h-96 w-96 rounded-full bg-rose/20 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_.8fr] md:items-center md:py-24 lg:px-8">
+        <div>
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[.16em] text-pink-100">23ª Semana Nacional de Ciência e Tecnologia · 2026</p>
+          <h1 class="max-w-3xl text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">Ciência com nome de <span class="text-rose-300">mulher</span><br><span class="text-white/70">(e de mãe)</span></h1>
+          <p class="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">Um museu digital para descobrir trajetórias, pesquisas, conquistas e perguntas que movem mulheres na ciência — com Mato Grosso como ponto de partida.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#pesquisadoras" class="rounded-xl bg-rose px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-rose/20 transition hover:-translate-y-0.5 hover:bg-rose/90">Explorar trajetórias <span aria-hidden="true">↗</span></a>
+            <a href="#como-funciona" class="rounded-xl border border-white/25 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10">Como funciona</a>
+          </div>
+          <p class="mt-5 max-w-xl text-xs leading-5 text-white/55">Protótipo editorial. Dados, imagens e citações devem ser confirmados na fonte original antes da publicação final.</p>
+        </div>
+        <div class="relative mx-auto w-full max-w-md">
+          <div class="glass rounded-[2rem] p-5 text-ink shadow-2xl shadow-black/25">
+            <div class="flex items-center justify-between gap-3"><span class="text-xs font-extrabold uppercase tracking-[.15em] text-plum">Mapa de conhecimento</span><span class="rounded-full bg-lilac px-3 py-1 text-xs font-bold text-plum">interativo</span></div>
+            <div class="relative mt-5 grid grid-cols-3 gap-3 text-center text-xs font-bold">
+              <div class="rounded-2xl bg-lilac p-3">Trajetória</div><div class="rounded-2xl bg-rose/15 p-3">Pesquisa</div><div class="rounded-2xl bg-emerald-50 p-3">Impacto</div>
+              <div class="col-span-3 mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-plum text-4xl text-white shadow-xl ring-8 ring-lilac">✳</div>
+              <div class="rounded-2xl bg-amber-50 p-3">Fontes</div><div class="rounded-2xl bg-sky-50 p-3">Conexões</div><div class="rounded-2xl bg-fuchsia-50 p-3">Memórias</div>
+            </div>
+            <p class="mt-4 text-center text-xs leading-5 text-slate-500">Escolha uma pessoa para abrir o seu mapa mental e explorar cada ramo.</p>
+          </div>
+          <div class="absolute -bottom-5 -left-4 rounded-2xl border border-white/40 bg-white px-4 py-3 text-xs font-bold text-ink shadow-xl">Conhecimento · Memória · Futuro</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pesquisadoras" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div><p class="text-xs font-extrabold uppercase tracking-[.2em] text-rose">Explore o acervo</p><h2 class="mt-2 text-3xl font-black tracking-tight text-ink sm:text-4xl">Quem faz ciência?</h2><p class="mt-3 max-w-2xl text-slate-600">Selecione uma trajetória. O mapa mental e os detalhes mudam na mesma página, sem abrir outra aba.</p></div>
+        <div class="w-full lg:max-w-sm"><label for="search-input" class="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-500">Pesquisar no acervo</label><div class="flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm focus-within:border-plum"><span class="text-slate-400" aria-hidden="true">⌕</span><input id="search-input" class="w-full bg-transparent text-sm outline-none placeholder:text-slate-400" type="search" placeholder="Nome, área ou instituição…"></div></div>
+      </div>
+      <div id="filter-buttons" class="mt-6 flex flex-wrap gap-2" aria-label="Filtrar por área"></div>
+      <div id="profile-grid" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite"></div>
+
+      <section id="perfil-detalhe" class="mt-12 scroll-mt-24 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-soft">
+        <div class="grid lg:grid-cols-[.82fr_1.18fr]">
+          <aside class="relative overflow-hidden bg-gradient-to-br from-lilac via-white to-rose/10 p-6 sm:p-8">
+            <div class="flex items-start justify-between gap-4"><span id="detail-category" class="rounded-full bg-white/90 px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide text-plum shadow-sm">TRAJETÓRIA</span><span class="text-xs font-bold text-slate-400">FICHA 01</span></div>
+            <div id="detail-photo-wrap" class="mx-auto mt-6 grid h-36 w-36 place-items-center overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-xl sm:h-44 sm:w-44">
+              <img id="detail-photo" class="hidden h-full w-full object-cover" alt="Retrato da pessoa selecionada">
+              <div id="detail-fallback" class="portrait-fallback h-full w-full text-4xl">BM</div>
+            </div>
+            <h3 id="detail-name" class="mt-6 text-center text-2xl font-black leading-tight text-ink sm:text-3xl">Dra. Beatriz Schwantes Marimon</h3>
+            <p id="detail-place" class="mt-2 text-center text-sm font-semibold text-plum">UNEMAT · Nova Xavantina, MT</p>
+            <p id="detail-summary" class="mx-auto mt-4 max-w-xl text-center text-sm leading-6 text-slate-600"></p>
+            <div class="mt-6 flex flex-wrap justify-center gap-2"><button id="open-profile-sources" class="rounded-xl border border-plum/20 bg-white px-4 py-2.5 text-sm font-bold text-plum hover:bg-lilac">Fontes oficiais ↗</button><button id="open-beta-profile" class="rounded-xl bg-plum px-4 py-2.5 text-sm font-bold text-white hover:bg-ink">Testar 3D 🔐</button></div>
+            <p id="detail-photo-credit" class="mt-5 text-center text-[11px] leading-4 text-slate-500">Fotografia e crédito a confirmar.</p>
+          </aside>
+          <div class="min-w-0 p-4 sm:p-7 lg:p-8">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><p class="text-xs font-extrabold uppercase tracking-[.18em] text-rose">Mapa mental da trajetória</p><h4 class="mt-1 text-2xl font-black text-ink">Explore os ramos</h4></div><p class="max-w-sm text-xs leading-5 text-slate-500">Toque num nó do mapa para ver os detalhes, resultados e materiais documentados.</p></div>
+            <div class="mindmap-scroll mt-4 overflow-hidden rounded-2xl border border-slate-100 bg-[#fcfaff] p-2 sm:p-3"><svg id="mindmap" viewBox="0 0 900 470" class="h-auto w-full" role="img" aria-label="Mapa mental interativo da trajetória científica"></svg></div>
+            <div class="mt-4 rounded-2xl border border-lilac bg-lilac/40 p-4 sm:p-5"><div class="flex flex-wrap items-center justify-between gap-2"><div><p id="map-info-kicker" class="text-[11px] font-extrabold uppercase tracking-[.15em] text-plum">NÓ SELECIONADO</p><h5 id="map-info-title" class="mt-1 text-lg font-extrabold text-ink">Pesquisa</h5></div><span id="map-info-status" class="rounded-full bg-white px-3 py-1 text-[11px] font-bold text-slate-500">Conteúdo de referência</span></div><div id="map-info-body" class="details-content mt-3 text-sm leading-6 text-slate-700"></div><div id="map-info-links" class="mt-3 flex flex-wrap gap-3 text-sm"></div></div>
+            <div class="mt-6 flex flex-wrap gap-2" role="tablist" aria-label="Detalhes da trajetória"><button class="tab-btn rounded-xl border border-slate-200 px-4 py-2 text-sm font-bold" data-tab="trajectory" role="tab" aria-selected="true">Trajetória</button><button class="tab-btn rounded-xl border border-slate-200 px-4 py-2 text-sm font-bold" data-tab="contributions" role="tab" aria-selected="false">Contribuições</button><button class="tab-btn rounded-xl border border-slate-200 px-4 py-2 text-sm font-bold" data-tab="sources" role="tab" aria-selected="false">Fontes e entrevistas</button></div>
+            <div id="detail-panel" class="details-content mt-4 min-h-28 rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-700 sm:p-5"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="dados" class="border-y border-slate-200 bg-white py-14 sm:py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl"><p class="text-xs font-extrabold uppercase tracking-[.2em] text-rose">Contexto em números</p><h2 class="mt-2 text-3xl font-black text-ink sm:text-4xl">A ciência também tem contexto</h2><p class="mt-3 text-slate-600">Indicadores ajudam a compreender participação, financiamento e desigualdade de tempo. Cada número mantém seu período e universo de referência.</p></div>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-2xl border border-slate-200 p-5"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">FAPEMAT · 2026</p><p class="mt-2 text-4xl font-black text-plum">≈56%</p><p class="mt-2 text-sm font-bold">Mulheres no cadastro da fundação</p><p class="mt-2 text-xs leading-5 text-slate-500">Dado de referência do projeto; confirmar os números absolutos na publicação primária.</p></article>
+          <article class="rounded-2xl border border-slate-200 p-5"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">FAPEMAT · 2021</p><p class="mt-2 text-4xl font-black text-plum">56,41%</p><p class="mt-2 text-sm font-bold">Mulheres no SIGFAPEMAT</p><p class="mt-2 text-xs leading-5 text-slate-500">Série histórica de fevereiro de 2021 fornecida como referência do projeto.</p></article>
+          <article class="rounded-2xl border border-slate-200 p-5"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">IBGE · 2022</p><p class="mt-2 text-4xl font-black text-plum">21,3 h</p><p class="mt-2 text-sm font-bold">Tempo semanal das mulheres</p><p class="mt-2 text-xs leading-5 text-slate-500">Média dedicada a afazeres domésticos e/ou cuidados; homens: 11,7 horas.</p></article>
+          <article class="rounded-2xl border border-slate-200 p-5"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">UNESCO · 2023</p><p class="mt-2 text-4xl font-black text-plum">31,4%</p><p class="mt-2 text-sm font-bold">Pesquisadoras no mundo</p><p class="mt-2 text-xs leading-5 text-slate-500">Percentual global de mulheres entre os pesquisadores, segundo a UNESCO.</p></article>
+        </div>
+        <p class="mt-5 text-xs leading-5 text-slate-500">Antes da publicação definitiva, confirme cada indicador na fonte primária. Não interpretar o dado da FAPEMAT como percentual de todas as pessoas que fazem ciência em Mato Grosso.</p>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-18">
+      <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div><p class="text-xs font-extrabold uppercase tracking-[.2em] text-rose">Experiência do visitante</p><h2 class="mt-2 text-3xl font-black text-ink sm:text-4xl">Uma página, muitas conexões</h2><p class="mt-4 leading-7 text-slate-600">O protótipo reúne os perfis no mesmo site. Cada pessoa tem um mapa mental com nós clicáveis para explorar trajetória, pesquisa, contribuições, contexto histórico e fontes oficiais.</p><p class="mt-3 leading-7 text-slate-600">A área 3D fica separada como beta. Depois do acesso de teste, é possível carregar um arquivo GLB local para verificar como ficará o modelo — sem publicá-lo no site automaticamente.</p><button id="open-beta-how" class="mt-6 rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white hover:bg-plum">Abrir área beta 3D 🔐</button></div>
+        <div class="rounded-[2rem] bg-gradient-to-br from-ink to-plum p-6 text-white sm:p-8"><div class="grid grid-cols-2 gap-3"><div class="rounded-2xl border border-white/15 bg-white/10 p-4"><span class="text-2xl">🧠</span><p class="mt-3 font-extrabold">Mapa mental</p><p class="mt-1 text-xs leading-5 text-white/65">Conexões por pessoa, em um gráfico explorável.</p></div><div class="rounded-2xl border border-white/15 bg-white/10 p-4"><span class="text-2xl">📚</span><p class="mt-3 font-extrabold">Fontes</p><p class="mt-1 text-xs leading-5 text-white/65">Links para artigos, notícias e arquivos institucionais.</p></div><div class="rounded-2xl border border-white/15 bg-white/10 p-4"><span class="text-2xl">🎙️</span><p class="mt-3 font-extrabold">Relatos</p><p class="mt-1 text-xs leading-5 text-white/65">Área para entrevistas documentadas e frases conferidas.</p></div><div class="rounded-2xl border border-white/15 bg-white/10 p-4"><span class="text-2xl">🧪</span><p class="mt-3 font-extrabold">Beta 3D</p><p class="mt-1 text-xs leading-5 text-white/65">Espaço experimental, ainda em desenvolvimento.</p></div></div></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="bg-lilac/60 py-12"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid gap-5 md:grid-cols-[1fr_auto] md:items-center"><div><p class="text-xs font-extrabold uppercase tracking-[.2em] text-plum">Sobre este protótipo</p><h2 class="mt-2 text-2xl font-black text-ink">Ciência com Nome de Mulher (e de Mãe)</h2><p class="mt-2 max-w-3xl text-sm leading-6 text-slate-600">Projeto de comunicação pública da ciência inspirado no tema “Ciência Delas”, com foco no protagonismo das mulheres, histórias verificáveis, rigor científico e responsabilidade no uso de imagens e depoimentos.</p></div><div class="rounded-2xl border border-plum/15 bg-white p-4 text-xs leading-5 text-slate-500"><strong class="text-ink">Nota editorial</strong><br>Não usamos citações fictícias. Imagens e créditos devem ser autorizados. Distinguir ciência sediada em MT de trajetórias regionais ou históricas.</div></div></div></section>
+  </main>
+
+  <footer class="bg-ink px-4 py-6 text-center text-xs text-white/55">Protótipo de museu digital · Conteúdo sujeito a conferência editorial · © Projeto Ciência Delas</footer>
+
+  <!-- Modal beta: protótipo apenas. Senha no JavaScript não constitui controle de acesso seguro. -->
+  <div id="beta-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-ink/75 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="beta-title">
+    <div class="max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded-[1.75rem] bg-white p-5 shadow-2xl sm:p-7">
+      <div class="flex items-start justify-between gap-4"><div><p class="text-xs font-extrabold uppercase tracking-[.18em] text-rose">Área restrita de demonstração</p><h2 id="beta-title" class="mt-1 text-2xl font-black text-ink">Laboratório Beta 3D</h2><p class="mt-2 max-w-xl text-sm leading-6 text-slate-600">A área de teste fica nesta mesma página. Digite a senha de demonstração para abrir o visualizador e testar um arquivo GLB no seu navegador.</p></div><button id="close-beta" class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-100 text-xl text-slate-600 hover:bg-slate-200" aria-label="Fechar janela">×</button></div>
+      <form id="beta-form" class="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4"><label for="beta-password" class="block text-sm font-extrabold text-ink">Senha beta</label><div class="mt-2 flex flex-col gap-2 sm:flex-row"><input id="beta-password" type="password" autocomplete="off" class="min-w-0 flex-1 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:border-plum focus:ring-2 focus:ring-plum/20" placeholder="Digite a senha de teste" required><button class="rounded-xl bg-plum px-5 py-3 text-sm font-extrabold text-white hover:bg-ink" type="submit">Desbloquear</button></div><p id="beta-feedback" class="mt-2 min-h-5 text-xs text-slate-500" aria-live="polite">A senha de demonstração está no README do pacote.</p></form>
+      <div id="beta-content" class="mt-5 hidden">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><h3 class="text-lg font-black text-ink">Teste um modelo GLB</h3><p class="mt-1 text-xs text-slate-500">O arquivo é carregado apenas no navegador; não é enviado para servidor.</p></div><label class="inline-flex cursor-pointer items-center justify-center rounded-xl border border-plum/25 px-4 py-2.5 text-sm font-bold text-plum hover:bg-lilac">Escolher arquivo .glb<input id="model-file" type="file" accept=".glb,model/gltf-binary" class="sr-only"></label></div>
+        <model-viewer id="beta-model" src="models/avatar-demo.glb" alt="Modelo 3D demonstrativo" camera-controls auto-rotate shadow-intensity="1" exposure="1" ar ar-modes="webxr scene-viewer quick-look" class="mt-4"></model-viewer>
+        <p id="model-feedback" class="mt-2 text-xs text-slate-500">Modelo demonstrativo carregado, se o arquivo estiver presente. Escolha um GLB para substituí-lo temporariamente.</p>
+        <div class="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs leading-5 text-amber-900"><strong>Aviso:</strong> esta senha é apenas um bloqueio visual para protótipo. Em GitHub Pages, o código e a senha podem ser vistos por visitantes técnicos. Não coloque dados pessoais, modelos privados ou conteúdo confidencial nesta área.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
